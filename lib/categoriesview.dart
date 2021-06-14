@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'drawer.dart';
-
-
 
 class CategoriesView extends StatelessWidget {
   static const String routeName = '/categories';
@@ -10,12 +7,12 @@ class CategoriesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Scaffold(
-                appBar: AppBar(
-                  title: const Text('Kategori'),
-                  	backgroundColor: Colors.red.shade900,
-                  centerTitle: true,
-                ),
-                //drawer: cDrawer(context)
+      appBar: AppBar(
+        title: const Text('Kategori'),
+        backgroundColor: Colors.red.shade900,
+        centerTitle: true,
+      ),
+      //drawer: cDrawer(context)
     ));
   }
 }

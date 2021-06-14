@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uasmobile/models/kategori.dart';
 import 'package:uasmobile/providers/kategori_provider.dart';
-
 
 class EditKategori extends StatefulWidget {
   final Kategori kategori;
@@ -18,7 +16,6 @@ class _EditKategoriState extends State<EditKategori> {
   final kategoriIdController = TextEditingController();
   final namakategoriController = TextEditingController();
   final deskripsiController = TextEditingController();
-  
 
   @override
   void dispose() {
@@ -36,7 +33,8 @@ class _EditKategoriState extends State<EditKategori> {
       namakategoriController.text = "";
       deskripsiController.text = "";
       new Future.delayed(Duration.zero, () {
-        final kategoriProvider = Provider.of<KategoriProvider>(context, listen: false);
+        final kategoriProvider =
+            Provider.of<KategoriProvider>(context, listen: false);
         kategoriProvider.loadValues(Kategori());
       });
     } else {
@@ -46,7 +44,8 @@ class _EditKategoriState extends State<EditKategori> {
       deskripsiController.text = widget.kategori.deskripsi;
       //State Update
       new Future.delayed(Duration.zero, () {
-        final kategoriProvider = Provider.of<KategoriProvider>(context, listen: false);
+        final kategoriProvider =
+            Provider.of<KategoriProvider>(context, listen: false);
         kategoriProvider.loadValues(widget.kategori);
       });
     }
@@ -104,7 +103,8 @@ class _EditKategoriState extends State<EditKategori> {
                     ),
                     child: Text('Delete'),
                     onPressed: () {
-                      kategoriProvider.removeKategori(widget.kategori.kategoriId);
+                      kategoriProvider
+                          .removeKategori(widget.kategori.kategoriId);
                       Navigator.of(context).pop();
                     },
                   )

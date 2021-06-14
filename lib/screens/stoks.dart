@@ -3,20 +3,19 @@ import 'package:provider/provider.dart';
 import 'package:uasmobile/models/stok.dart';
 import 'package:uasmobile/screens/edit_stok.dart';
 
-
 class Stoks extends StatelessWidget {
   static const String routeName = '/stok';
 
   @override
   Widget build(BuildContext context) {
-      final stoks = Provider.of<List<Stok>>(context);
+    final stoks = Provider.of<List<Stok>>(context);
     return Scaffold(
-       body: Container(
-        child: Scaffold(
-                appBar: AppBar(
-                  title: const Text('Stok'),
-                  	backgroundColor: Colors.red.shade900,
-                  centerTitle: true,
+        body: Container(
+            child: Scaffold(
+      appBar: AppBar(
+        title: const Text('Stok'),
+        backgroundColor: Colors.red.shade900,
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: Icon(

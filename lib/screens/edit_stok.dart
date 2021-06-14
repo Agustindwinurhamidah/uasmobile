@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uasmobile/models/stok.dart';
 import 'package:uasmobile/providers/stok_provider.dart';
-
 
 class EditStok extends StatefulWidget {
   final Stok stok;

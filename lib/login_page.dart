@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:uasmobile/register_page.dart';
 import 'package:uasmobile/sign_in.dart';
@@ -25,9 +24,9 @@ class _LoginPageState extends State<LoginPage> {
             shrinkWrap: true,
             padding: EdgeInsets.only(left: 24.0, right: 24.0),
             children: <Widget>[
-             // FlutterLogo(size: 100),
+              // FlutterLogo(size: 100),
               SizedBox(height: 48),
-               _formLogin(),
+              _formLogin(),
               SizedBox(height: 20.0),
               _signInButton(),
               // _register(),
@@ -46,7 +45,10 @@ class _LoginPageState extends State<LoginPage> {
         children: <Widget>[
           Container(
             child: const Text('WELCOME TO AGUSTIN HIJAB:) '),
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(70),
+             decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/logo.png'),),
+        ),
             alignment: Alignment.center,
           ),
           Container(
@@ -54,7 +56,10 @@ class _LoginPageState extends State<LoginPage> {
             alignment: Alignment.center,
             child: TextFormField(
               controller: emailController,
-              decoration: const InputDecoration(labelText: 'Email'),
+              decoration: const InputDecoration(
+                icon:Icon(Icons.mail),
+                labelText: 'Email',
+                ),
               validator: (String value) {
                 if (value.isEmpty) {
                   return 'Please enter some text';
@@ -69,7 +74,10 @@ class _LoginPageState extends State<LoginPage> {
             child: TextFormField(
               controller: passwordController,
               obscureText: true,
-              decoration: const InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(
+                 icon:Icon(Icons.vpn_key),
+                labelText: 'Password',
+                ),
               validator: (String value) {
                 if (value.isEmpty) {
                   return 'Please enter some text';

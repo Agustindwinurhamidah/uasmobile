@@ -7,14 +7,14 @@ class Kategoris extends StatelessWidget {
   static const String routeName = '/categories';
   @override
   Widget build(BuildContext context) {
-      final kategoris = Provider.of<List<Kategori>>(context);
+    final kategoris = Provider.of<List<Kategori>>(context);
     return Scaffold(
-       body: Container(
-        child: Scaffold(
-                appBar: AppBar(
-                  title: const Text('Kategori'),
-                  	backgroundColor: Colors.red.shade900,
-                  centerTitle: true,
+        body: Container(
+            child: Scaffold(
+      appBar: AppBar(
+        title: const Text('Kategori'),
+        backgroundColor: Colors.red.shade900,
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: Icon(

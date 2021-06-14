@@ -7,12 +7,12 @@ class TransactionView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Scaffold(
-                appBar: AppBar(
-                  title: const Text('Profil'),
-                  	backgroundColor: Colors.red.shade900,
-                  centerTitle: true,
-                ),
-                // drawer: createDrawer(context)
+      appBar: AppBar(
+        title: const Text('Profil'),
+        backgroundColor: Colors.red.shade900,
+        centerTitle: true,
+      ),
+      // drawer: createDrawer(context)
     ));
   }
 }

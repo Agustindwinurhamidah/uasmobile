@@ -4,7 +4,6 @@ import 'package:uasmobile/screens/kategoris.dart';
 import 'package:uasmobile/screens/profil.dart';
 import 'package:uasmobile/screens/stoks.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -21,22 +20,19 @@ class MyApp extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-              child: Text(
-                'Agustin Hijab',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+              child: Container (
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage('assets/logo.png'))
                 ),
+                
               ),
+              
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Profil'),
               onTap: () => Navigator.of(context)
-              .push( MaterialPageRoute(builder: (context) => Profile())),
+                  .push(MaterialPageRoute(builder: (context) => Profile())),
             ),
             ListTile(
               leading: Icon(Icons.message),
@@ -62,6 +58,9 @@ class MyApp extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/logo.png'),),
+        ),
         child: Center(
           child: Text(
             'Hijab Agustin menyediakan Berbagai macam Hijab seperti Jilbab Segi Empat, Jilbab Pashmina, Jilbab Bergo, Jilbab Rajut dan lain lain .Kualitas Terbaik. Pusat Hijab Terbaik di Sulfat. Bahan Nyaman dan Lembut. Mudah Dibentuk :)',

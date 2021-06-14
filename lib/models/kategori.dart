@@ -3,8 +3,7 @@ class Kategori {
   final String namakategori;
   final String deskripsi;
 
-
-  Kategori({this.kategoriId,this.namakategori, this.deskripsi});
+  Kategori({this.kategoriId, this.namakategori, this.deskripsi});
 
   Map<String, dynamic> toMap() {
     return {
@@ -18,5 +17,4 @@ class Kategori {
       : kategoriId = firestore['kategoriId'],
         namakategori = firestore['namakategori'],
         deskripsi = firestore['deskripsi'];
-        
 }

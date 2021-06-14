@@ -1,6 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uasmobile/sign_in.dart';
 
 class Profile extends StatelessWidget {
   static const String routeName = '/transaction';
@@ -20,28 +20,45 @@ class Profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
+              CircleAvatar(
+                backgroundImage: NetworkImage(
+                  imageUrl,
+                ),
+                radius: 60,
+                backgroundColor: Colors.transparent,
+              ),
+              SizedBox(height: 40),
               Text(
-                'NAMA : Agustin Dwi Nur Hamidah',
+                'NAMA ',
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Colors.black54),
               ),
               Text(
-                'ALAMAT : JL.Terusan Sulfat rt.03 rw.05',
+                name,
                 style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
-              ),
-              Text(
-                'WA : 082141071128',
-                style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                     color: Colors.black54,
                     fontWeight: FontWeight.bold),
               ),
-            ],
+              SizedBox(height: 20),
+              Text(
+                'EMAIL',
+                style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black54),
+              ),
+              Text(
+                email,
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.black54,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 40),  
+       ],
           ),
         ),
       ),
