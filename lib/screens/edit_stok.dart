@@ -64,14 +64,14 @@ class _EditStokState extends State<EditStok> {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: <Widget>[
-            TextField(
-              controller: stokIdController,
+             TextField(
+               controller: stokIdController,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(hintText: 'Stok Id'),
               onChanged: (value) {
-                stokProvider.changestokId(value);
+                 stokProvider.changestokId(value);
               },
-            ),
+             ),
             TextField(
               controller: namabarangController,
               keyboardType: TextInputType.text,

@@ -63,14 +63,14 @@ class _EditKategoriState extends State<EditKategori> {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: <Widget>[
-            TextField(
-              controller: kategoriIdController,
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(hintText: 'Kode kategori'),
-              onChanged: (value) {
-                kategoriProvider.changekategoriId(value);
-              },
-            ),
+             TextField(
+             controller: kategoriIdController,
+               keyboardType: TextInputType.text,
+               decoration: InputDecoration(hintText: 'Kode kategori'),
+               onChanged: (value) {
+                 kategoriProvider.changekategoriId(value);
+               },
+             ),
             TextField(
               controller: namakategoriController,
               keyboardType: TextInputType.text,

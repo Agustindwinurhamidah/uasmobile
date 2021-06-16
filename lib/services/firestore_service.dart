@@ -5,7 +5,7 @@ import 'package:uasmobile/models/stok.dart';
 class FirestoreService {
   FirebaseFirestore _db = FirebaseFirestore.instance;
 
-  //siswa
+  //stok
   Future<void> saveStok(Stok stok) {
     return _db.collection('stoks').doc(stok.stokId).set(stok.toMap());
   }
@@ -20,7 +20,7 @@ class FirestoreService {
     return _db.collection('stoks').doc(Id).delete();
   }
 
-  //mapel
+  //kategori
   Future<void> saveKategori(Kategori kategori) {
     return _db
         .collection('kategoris')
